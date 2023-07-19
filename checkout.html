@@ -256,7 +256,7 @@
   document.getElementById("viberButton").addEventListener("click", function(event) {
     event.preventDefault();
     var recipientURI = "viber://pa?chatURI=masarapexpress"; // Replace with the actual URI of the recipient chat
-    var message = " Hi Welcome to Masarap Express Social Desk, Your Order Number #KLI1725, will there be any added to your order? (happy)"; // Replace with the desired pre-filled message
+    var message = " Hi Welcome to Masarap Express Social Desk, Your Order Number #KLI1725, will there be any added to your order?"; // Replace with the desired pre-filled message
     var viberUrl = recipientURI + "&text=" + encodeURIComponent(message);
     
     window.open(viberUrl, "_blank");
