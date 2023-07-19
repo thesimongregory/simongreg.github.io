@@ -75,6 +75,15 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="assets/css/theme.css" rel="stylesheet" />
+    <script>
+  document.getElementById("viberButton").addEventListener("click", function() {
+    var phoneNumber = "1234567890";  // Replace with the desired phone number
+    
+    var viberUrl = "viber://forward?text=Hello&recipient=" + phoneNumber;
+    
+    window.location.href = viberUrl;
+  });
+</script>
 
   </head>
 
@@ -241,7 +250,18 @@
                 </tr>
               </tbody>
             </table>
-            <a href="#" class="boxed-btn">Place Order</a>
+<a href="#" class="boxed-btn" id="viberButton">Place Order</a>
+
+<script>
+  document.getElementById("viberButton").addEventListener("click", function(event) {
+    event.preventDefault();
+    var recipientURI = "viber://pa?chatURI=masarapexpress"; // Replace with the actual URI of the recipient chat
+    var message = " Hi Welcome to Masarap Express Social Desk, Your Order Number #KLI1725, will there be any added to your order? (happy)"; // Replace with the desired pre-filled message
+    var viberUrl = recipientURI + "&text=" + encodeURIComponent(message);
+    
+    window.open(viberUrl, "_blank");
+  });
+</script>
           </div>
         </div>
       </div>
